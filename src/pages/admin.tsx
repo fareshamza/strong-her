@@ -419,6 +419,7 @@ export default function AdminPage() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 }
