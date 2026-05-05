@@ -1,0 +1,173 @@
+I have an existing web app project (HTML + CSS + JavaScript + Google Apps Script) for a fitness planner ordering system.
+
+I will upload the full project files. I want you to MODIFY and IMPROVE the existing code, not rebuild from scratch.
+
+---
+
+🎯 GOAL:
+Fix bugs, simplify UX, improve UI, and make the app ready for real users and sales.
+
+---
+
+🔴 CRITICAL BUG TO FIX:
+
+- The admin page is NOT opening.
+Fix routing in Google Apps Script (doGet function) so that:
+- /?page=admin opens admin.html
+- default opens index.html
+
+Make sure:
+- File names match exactly
+- No broken references
+
+---
+
+🧠 UX IMPROVEMENTS (VERY IMPORTANT):
+
+Simplify the user flow into 3 steps:
+
+1. Step 1:
+   - Select number of workout days
+   - Select workout split
+
+2. Step 2:
+   - Select exercises per day
+   - Max 8 exercises per day
+   - Add option for custom exercise
+
+3. Step 3:
+   - Name
+   - Phone number
+   - Vodafone Cash number
+   - Upload receipt image
+
+---
+
+🎨 UI IMPROVEMENTS:
+
+- Add a landing/hero section at the top:
+
+  Title: Strong Her Planner 💗
+  Subtitle: "Stop guessing your workouts. Start showing up for yourself."
+
+  Button: "Create Your Plan"
+
+- Use soft feminine colors (light pink, white, beige)
+- Make layout clean, modern, mobile-friendly
+- Add spacing and improve typography
+
+---
+
+💰 CONVERSION IMPROVEMENTS:
+
+- Change button text:
+  "Submit" → "Get My Planner"
+
+- Add small texts like:
+  "Takes less than 2 minutes"
+  "Start today. Stay consistent."
+
+---
+
+📸 UPLOAD EXPERIENCE:
+
+- Add image preview after user uploads receipt
+- Show loading state while submitting
+
+---
+
+⚙️ BACKEND (Google Apps Script):
+
+Fix and improve:
+
+1. doGet routing:
+   - index.html (default)
+   - admin.html (?page=admin)
+
+2. submitOrder():
+   - Store:
+     name, phone, days, split, exercises (JSON),
+     payment number, image URL, status = Pending, date
+
+3. getOrders():
+   - Return all rows for admin
+
+---
+
+🧑‍💻 ADMIN DASHBOARD:
+
+Fix and improve admin.html:
+
+- Display orders in table
+- Show:
+  name, phone, days, split, status
+
+- Add buttons:
+  Approve / Reject
+
+- Add basic filtering (by status or date if possible)
+
+- Make sure it loads without errors
+
+---
+
+📄 PDF SYSTEM (IMPORTANT BUT KEEP SIMPLE):
+
+Instead of complex PDF libraries:
+
+- Use HTML template for planner
+- Generate printable layout (A5 style)
+- Insert exercises dynamically
+- Convert to PDF
+
+PDF should:
+- Repeat workout page based on number of days
+- Show selected exercises (max 8)
+
+---
+
+🔐 SECURITY FIX:
+
+- Remove hardcoded admin password from frontend
+- Move it to backend or config
+
+---
+
+📱 MOBILE OPTIMIZATION:
+
+- Ensure everything works well on phone
+- Buttons big enough
+- Inputs easy to use
+
+---
+
+🧹 CLEANUP:
+
+- Remove unused code
+- Organize files clearly
+- Add comments for important parts
+
+---
+
+📦 OUTPUT FORMAT:
+
+Give me:
+1. Updated full project files (ready to copy-paste)
+2. Clear instructions:
+   - Where to paste Google Sheet ID
+   - How to deploy
+   - How to open admin page
+
+---
+
+IMPORTANT:
+Do NOT overcomplicate.
+Keep everything simple, clean, and beginner-friendly.
+
+This is an MVP for real users, not a complex SaaS.
+
+Focus on:
+✔ Working system
+✔ Clean UI
+✔ Easy flow
+✔ Ready for launch
